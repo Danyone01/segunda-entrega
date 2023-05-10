@@ -1,0 +1,202 @@
+/*  General */
+*   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global */
+@font-face {
+    font-family: 'Lato';
+    src: url(./assets/ttf/lato/Lato-Bold.ttf) format("truetype");
+    font-weight: bold;
+}
+
+@font-face  {
+    font-family: 'Lato';
+    src: url(./assets/ttf/lato/Lato-Regular.ttf);
+    font-style: normal;
+}
+
+body    {
+    font-family: 'Lato';
+}
+
+a   {
+    text-decoration: none;
+}
+
+ul  {
+    list-style-type: none;
+}
+
+/* Header */
+.header {
+    background-color: #c70101;
+    padding: 30px 20px;
+} 
+
+.header__container  {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__container h2 a {
+    color: whitesmoke;
+    
+}
+
+.header__container-navbar   {
+   display: none;
+}
+
+.header__container-navbar li    {
+    margin: 0 15px;
+}
+
+.header__container-navbar li a  {
+    color: aqua;
+    font-weight: bold;
+}
+
+.header__container-navbar li a:hover    {
+    color: black;
+    font-weight: bold;
+}
+
+.main   {
+    padding: 60px 20px;
+    color: black;
+}
+
+.main__container    {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.main__container-info h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.main__container-info p {
+    margin-bottom: 40px;
+}
+
+.main__container-info a {
+    color: #e2e8f0;
+    border-radius: 80px;
+    background-color: rgb(32, 31, 31);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 30px;
+}
+
+.main__container-info a:hover {
+    background-color: rgb(36, 1, 1);
+}
+
+/* Tarjetas */
+.planes {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.planes__cards  {
+    display: flex;
+    /* grid-template-columns: 1fr;*/
+    gap: 50px; 
+}
+
+.card   {
+    background-color: #fff;
+    border-radius: 30px; 
+    padding: 20px;
+    box-shadow: 2px 2px 50px -1px rgba(0, 0, 0, 0.6);
+}
+
+.card__header img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.card__title    {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.card__description  {
+    margin-bottom: 40px;
+}
+
+.card__link {
+    background-color:black;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 0;
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+} 
+
+.card__link:hover{
+    background-color: #c70101;
+}
+
+.footer{
+    margin-top: 50px;
+    padding: 20px 30 px;
+    text-align: center;
+    color: rgb(122, 135, 135);
+}
+
+/* Horarios */
+.horarios   {
+    display: flex;
+}
+
+/* Media Queries */
+@media  (min-width: 576px)  {
+    .planes__cards  {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width:768px)   {
+    .header__container-navbar   {
+        display: flex;
+        align-items: center;
+    }
+    .header__container-navbar li   {
+        margin: 0 15px;
+    }
+    .header__container-navbar li a  {
+        color: white;
+        font-weight: bold;
+    }
+    .header__container-navbar li a:hover    {
+        color: black;
+    }
+    .header__container-navbar-mobile    {
+        display: none;
+    }
+    .planes__cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media  (min-width: 992px)  {
+    .planes__cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}   
